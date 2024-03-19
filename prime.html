@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+<script>
+    let number= +prompt("Enter number")
+    function isPrime(number){
+        if (number < 2) {
+            return "Is not a integer";
+        }
+        for (let i = 2; i < number; i++) {
+            if ( number % i === 0){
+                return "Is not a integer"
+            }
+        }
+                return "It's a integer"
+    }
+    alert(isPrime(number))
+</script>
+</body>
+</html>
