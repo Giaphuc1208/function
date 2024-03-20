@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--suppress UnreachableCodeJS -->
+<!--suppress ALL -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -116,7 +116,7 @@
     number2 = result[1];
     console.log("After swap : number 1 = " + number1 + " number 2 = " + number2 );*/
 
-    /* Bài 8*/
+    /* Bài 8
     function swap([]){
         let a = [];
         let b = [1, 0, 0 , 2, 8, 0, 2, 1];
@@ -125,19 +125,14 @@
             console.log(+b)
         } return a;
     }
-    console.log(swap([]))
+    console.log(swap([]))*/
 
 
-    /* Bài 9
-    //"Viết hàm truyền vào một mảng ký tự,
-    // và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
-    let arr = [1, 2, 8, 2, 0, 1, 2, 4, 6, 12, 4, 6, 7, 2, 4, 5];
-    let number = +prompt("Enter number: ");
-// bh ta đặt trường hop tim so 1 => như qua sát thì có 2 ,1 trong mảng => theo như đề bài thì nếu như xuất hien so 1 thì là 2 lan
-    function test(arr) {
+    /* Bài 9*/
+    function test(array, number) {
         let count = 0;
-        for (let i = 0; i < arr.length; i++) {
-            if (number === arr[i]) {
+        for (let i = 0; i < array.length; i++) {
+            if (number == array[i]) {
                 count++;
             }
         }
@@ -148,9 +143,10 @@
             return -1
         }
     }
-    console.log(test(arr))*/
-    // alert(test(arr))
-    //return count > 0 ? count:  -1;
+    let num = prompt ("Enter characters :")
+    console.log(test(['s', 'n', 's', 1, 4, 5, 's'], num));
+    console.log(test(['a', 'x', 'z', 16, 5, 2, 's'], num));
+
 </script>
 </body>
 </html>
