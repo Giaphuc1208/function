@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--suppress UnreachableCodeJS -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,26 +24,27 @@
 
 
     /* Bài tập 2:
+    let pi = 3.14;
     function calculateArea(radius){
-        let Area= Math.PI * radius * radius;
+        let Area= pi * radius * radius;
         return Area;
     }
     function calculatePerimeter(radius){
-        let Perimeter= 2 * Math.PI * radius;
+        let Perimeter= 2 * pi * radius;
         return Perimeter;
     }
     let r= +prompt("Enter radius");
     let area = calculateArea(r);
-    console.log("Area is : " + calculateArea(r));
+    console.log("Area is : " + area);
     let perimeter = calculatePerimeter(r);
-    console.log("Perimeter is : " + calculatePerimeter(r));*/
+    console.log("Perimeter is : " + perimeter);*/
 
 
     /*Bài 3
     function calculateLosing_Phase(number) {
         if (number < 0) {
             return "Cannot calculate factorial of negative numbers"
-        } else if (number === 0 && number === 1) {
+        } else if (number === 0 || number === 1) {
             return 1;
         } else {
             let Losing_Phase = 1;
@@ -56,8 +58,19 @@
     let result = calculateLosing_Phase(num);
     console.log("Losing phase of " + num + " is :" + result);*/
 
-    /*Bài 4*/
-
+    /*Bài 4
+    function Find(number){
+        if (number % 1 === 0){
+            console.log(true);
+            return number;
+        } else {
+            console.log(false);
+            return number;
+        }
+    }
+    let a = prompt("Enter");
+    let f= Find(a);
+    console.log(Find(a))*/
 
     /* Bài 5
     function minNumber(num1, num2, num3){
@@ -65,7 +78,7 @@
         if (num2 < minNumber){
             minNumber = num2;
         } else if (num3 < minNumber){
-            minNum = num3;
+            minNumber = num3;
         }
         return minNumber;
     }
@@ -87,11 +100,57 @@
     let number = testNumber(a);
     console.log(number) */
 
-    /* Bài 7*/
+
+    /* Bài 7
+    function swap(num1, num2){
+       let a = num1;
+           num1 = num2;
+           num2 = a;
+           return [num1, num2];
+    }
+    let number1 = +prompt("Enter number1:");
+    let number2 = +prompt("Enter number1:");
+    console.log("Begin swap : number 1 = " + number1 + " number 2 = " + number2 );
+    let result=swap(number1, number2);
+    number1 = result[0];
+    number2 = result[1];
+    console.log("After swap : number 1 = " + number1 + " number 2 = " + number2 );*/
+
+    /* Bài 8*/
+    function swap([]){
+        let a = [];
+        let b = [1, 0, 0 , 2, 8, 0, 2, 1];
+        for (let i = b.length - 1; i >=0; i--){
+            a.push(b[i]);
+            console.log(+b)
+        } return a;
+    }
+    console.log(swap([]))
 
 
-
-
+    /* Bài 9
+    //"Viết hàm truyền vào một mảng ký tự,
+    // và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+    let arr = [1, 2, 8, 2, 0, 1, 2, 4, 6, 12, 4, 6, 7, 2, 4, 5];
+    let number = +prompt("Enter number: ");
+// bh ta đặt trường hop tim so 1 => như qua sát thì có 2 ,1 trong mảng => theo như đề bài thì nếu như xuất hien so 1 thì là 2 lan
+    function test(arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (number === arr[i]) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            return count;
+        }
+        else {
+            return -1
+        }
+    }
+    console.log(test(arr))*/
+    // alert(test(arr))
+    //return count > 0 ? count:  -1;
 </script>
 </body>
 </html>
